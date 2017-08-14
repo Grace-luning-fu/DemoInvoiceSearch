@@ -48,6 +48,17 @@ public class MainController {
         return "result";
     }
 
+    @GetMapping("/showproducts")
+    public @ResponseBody String showAllProducts()
+    {
+        Iterable <Product> productList = productRepo.findAllByDescriptionLike("my");
+        return productList.toString();
+        //for(Product item:productList)
+
+            //System.out.println(item.getDescription());
+
+    }
+
     @RequestMapping("/listproduct")
     public String listProduct(Model model) {
         model.addAttribute("message");

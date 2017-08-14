@@ -4,4 +4,6 @@ import me.grace.demo.models.Product;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProductRepo extends CrudRepository<Product,Long> {
+    Iterable<Product> findAllByDescriptionLike(String partialString);
+
 }

@@ -47,4 +47,5 @@ public class Product {
     public void setItemCode(long itemCode) {
         this.itemCode = itemCode;
     }
+
 }
